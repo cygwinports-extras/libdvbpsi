@@ -1,0 +1,345 @@
+libdvbpsi
+-------------------------------------------
+libdvbpsi is a simple library designed for decoding and generation of 
+MPEG TS and DVB PSI tables.
+
+Runtime requirements:
+  cygwin-1.5.24-2
+
+Build requirements:
+(besides corresponding -devel packages)
+  cygwin-1.5.24-2
+  autoconf2.5-2.61-1
+  automake1.9-1.9.6-2
+  binutils-20060817-1
+  cygport-0.2.11-1
+  gawk-3.1.5-4
+  gcc-core-3.4.4-3
+  libtool1.5-1.5.23a-2
+  make-3.81-1
+  sed-4.1.5-2
+
+Canonical website:
+  http://www.videolan.org/developers/libdvbpsi.html
+
+Canonical download:
+  http://download.videolan.org/pub/libdvbpsi/
+
+-------------------------------------------
+
+Build instructions:
+  unpack libdvbpsi-0.1.5-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./libdvbpsi-0.1.5-X.cygport all
+
+This will create:
+  /usr/src/libdvbpsi-0.1.5-X-src.tar.bz2
+  /usr/src/libdvbpsi-0.1.5-X.tar.bz2
+  /usr/src/libdvbpsi-devel-0.1.5-X.tar.bz2
+  /usr/src/libdvbpsi4-0.1.5-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary packages:
+
+(libdvbpsi)
+  /usr/share/doc/Cygwin/libdvbpsi-0.1.5.README
+  /usr/share/doc/libdvbpsi-0.1.5/AUTHORS
+  /usr/share/doc/libdvbpsi-0.1.5/COPYING
+  /usr/share/doc/libdvbpsi-0.1.5/ChangeLog
+  /usr/share/doc/libdvbpsi-0.1.5/INSTALL
+  /usr/share/doc/libdvbpsi-0.1.5/NEWS
+  /usr/share/doc/libdvbpsi-0.1.5/README
+  /usr/share/doc/libdvbpsi-0.1.5/html/annotated.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/decoder.png
+  /usr/share/doc/libdvbpsi-0.1.5/html/demux_8h-source.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/demux_8h.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/descriptor_8h-source.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/descriptor_8h.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/doxygen.css
+  /usr/share/doc/libdvbpsi-0.1.5/html/doxygen.png
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr_8h-source.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr_8h.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr_8h__incl.map
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr_8h__incl.md5
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr_8h__incl.png
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__02_8h-source.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__02_8h.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__02_8h__dep__incl.map
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__02_8h__dep__incl.md5
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__02_8h__dep__incl.png
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__03_8h-source.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__03_8h.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__03_8h__dep__incl.map
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__03_8h__dep__incl.md5
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__03_8h__dep__incl.png
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__04_8h-source.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__04_8h.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__04_8h__dep__incl.map
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__04_8h__dep__incl.md5
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__04_8h__dep__incl.png
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__05_8h-source.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__05_8h.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__05_8h__dep__incl.map
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__05_8h__dep__incl.md5
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__05_8h__dep__incl.png
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__06_8h-source.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__06_8h.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__06_8h__dep__incl.map
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__06_8h__dep__incl.md5
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__06_8h__dep__incl.png
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__07_8h-source.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__07_8h.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__07_8h__dep__incl.map
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__07_8h__dep__incl.md5
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__07_8h__dep__incl.png
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__08_8h-source.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__08_8h.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__08_8h__dep__incl.map
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__08_8h__dep__incl.md5
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__08_8h__dep__incl.png
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__09_8h-source.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__09_8h.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__09_8h__dep__incl.map
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__09_8h__dep__incl.md5
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__09_8h__dep__incl.png
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__0a_8h-source.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__0a_8h.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__0a_8h__dep__incl.map
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__0a_8h__dep__incl.md5
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__0a_8h__dep__incl.png
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__0b_8h-source.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__0b_8h.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__0b_8h__dep__incl.map
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__0b_8h__dep__incl.md5
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__0b_8h__dep__incl.png
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__0c_8h-source.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__0c_8h.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__0c_8h__dep__incl.map
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__0c_8h__dep__incl.md5
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__0c_8h__dep__incl.png
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__0d_8h-source.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__0d_8h.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__0d_8h__dep__incl.map
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__0d_8h__dep__incl.md5
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__0d_8h__dep__incl.png
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__0e_8h-source.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__0e_8h.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__0e_8h__dep__incl.map
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__0e_8h__dep__incl.md5
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__0e_8h__dep__incl.png
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__0f_8h-source.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__0f_8h.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__0f_8h__dep__incl.map
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__0f_8h__dep__incl.md5
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__0f_8h__dep__incl.png
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__42_8h-source.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__42_8h.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__42_8h__dep__incl.map
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__42_8h__dep__incl.md5
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__42_8h__dep__incl.png
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__47_8h-source.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__47_8h.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__47_8h__dep__incl.map
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__47_8h__dep__incl.md5
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__47_8h__dep__incl.png
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__48_8h-source.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__48_8h.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__48_8h__dep__incl.map
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__48_8h__dep__incl.md5
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__48_8h__dep__incl.png
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__4d_8h-source.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__4d_8h.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__4d_8h__dep__incl.map
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__4d_8h__dep__incl.md5
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__4d_8h__dep__incl.png
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__4e_8h-source.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__4e_8h.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__4e_8h__dep__incl.map
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__4e_8h__dep__incl.md5
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__4e_8h__dep__incl.png
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__52_8h-source.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__52_8h.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__52_8h__dep__incl.map
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__52_8h__dep__incl.md5
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__52_8h__dep__incl.png
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__55_8h-source.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__55_8h.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__55_8h__dep__incl.map
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__55_8h__dep__incl.md5
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__55_8h__dep__incl.png
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__56_8h-source.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__56_8h.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__56_8h__dep__incl.map
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__56_8h__dep__incl.md5
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__56_8h__dep__incl.png
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__59_8h-source.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__59_8h.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__59_8h__dep__incl.map
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__59_8h__dep__incl.md5
+  /usr/share/doc/libdvbpsi-0.1.5/html/dr__59_8h__dep__incl.png
+  /usr/share/doc/libdvbpsi-0.1.5/html/dvbpsi_8h-source.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/dvbpsi_8h.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/eit_8h-source.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/eit_8h.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/files.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/functions.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/functions_vars.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/graph_legend.dot
+  /usr/share/doc/libdvbpsi-0.1.5/html/graph_legend.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/graph_legend.png
+  /usr/share/doc/libdvbpsi-0.1.5/html/index.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/newdec.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/pages.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/pat_8h-source.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/pat_8h.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/pmt_8h-source.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/pmt_8h.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/psi_8h-source.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/psi_8h.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/sdt_8h-source.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/sdt_8h.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__astream__dr__s.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__bouquet__name__dr__s.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__ca__dr__s.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__copyright__dr__s.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__decoder__s.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__decoder__s__coll__graph.map
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__decoder__s__coll__graph.md5
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__decoder__s__coll__graph.png
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__demux__s.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__demux__s__coll__graph.map
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__demux__s__coll__graph.md5
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__demux__s__coll__graph.png
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__demux__subdec__s.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__demux__subdec__s__coll__graph.map
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__demux__subdec__s__coll__graph.md5
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__demux__subdec__s__coll__graph.png
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__descriptor__s.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__descriptor__s__coll__graph.map
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__descriptor__s__coll__graph.md5
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__descriptor__s__coll__graph.png
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__ds__alignment__dr__s.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__eit__event__s.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__eit__event__s__coll__graph.map
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__eit__event__s__coll__graph.md5
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__eit__event__s__coll__graph.png
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__eit__s.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__eit__s__coll__graph.map
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__eit__s__coll__graph.md5
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__eit__s__coll__graph.png
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__hierarchy__dr__s.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__iso639__dr__s.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__max__bitrate__dr__s.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__mx__buff__utilization__dr__s.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__parental__rating__dr__s.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__parental__rating__dr__s__coll__graph.map
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__parental__rating__dr__s__coll__graph.md5
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__parental__rating__dr__s__coll__graph.png
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__parental__rating__s.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__pat__program__s.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__pat__program__s__coll__graph.map
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__pat__program__s__coll__graph.md5
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__pat__program__s__coll__graph.png
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__pat__s.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__pat__s__coll__graph.map
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__pat__s__coll__graph.md5
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__pat__s__coll__graph.png
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__pmt__es__s.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__pmt__es__s__coll__graph.map
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__pmt__es__s__coll__graph.md5
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__pmt__es__s__coll__graph.png
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__pmt__s.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__pmt__s__coll__graph.map
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__pmt__s__coll__graph.md5
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__pmt__s__coll__graph.png
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__private__data__dr__s.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__psi__section__s.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__psi__section__s__coll__graph.map
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__psi__section__s__coll__graph.md5
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__psi__section__s__coll__graph.png
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__registration__dr__s.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__sdt__s.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__sdt__s__coll__graph.map
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__sdt__s__coll__graph.md5
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__sdt__s__coll__graph.png
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__sdt__service__s.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__sdt__service__s__coll__graph.map
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__sdt__service__s__coll__graph.md5
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__sdt__service__s__coll__graph.png
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__service__dr__s.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__short__event__dr__s.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__stuffing__dr__s.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__subtitle__s.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__subtitling__dr__s.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__subtitling__dr__s__coll__graph.map
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__subtitling__dr__s__coll__graph.md5
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__subtitling__dr__s__coll__graph.png
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__system__clock__dr__s.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__target__bg__grid__dr__s.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__teletext__dr__s.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__teletext__dr__s__coll__graph.map
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__teletext__dr__s__coll__graph.md5
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__teletext__dr__s__coll__graph.png
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__teletextpage__t.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__vstream__dr__s.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/structdvbpsi__vwindow__dr__s.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/structure.html
+  /usr/share/doc/libdvbpsi-0.1.5/html/tab_b.gif
+  /usr/share/doc/libdvbpsi-0.1.5/html/tab_l.gif
+  /usr/share/doc/libdvbpsi-0.1.5/html/tab_r.gif
+  /usr/share/doc/libdvbpsi-0.1.5/html/tabs.css
+  /usr/share/doc/libdvbpsi-0.1.5/html/usage.html
+
+(libdvbpsi4)
+  /usr/bin/cygdvbpsi-4.dll
+
+(libdvbpsi-devel)
+  /usr/include/dvbpsi/demux.h
+  /usr/include/dvbpsi/descriptor.h
+  /usr/include/dvbpsi/dr.h
+  /usr/include/dvbpsi/dr_02.h
+  /usr/include/dvbpsi/dr_03.h
+  /usr/include/dvbpsi/dr_04.h
+  /usr/include/dvbpsi/dr_05.h
+  /usr/include/dvbpsi/dr_06.h
+  /usr/include/dvbpsi/dr_07.h
+  /usr/include/dvbpsi/dr_08.h
+  /usr/include/dvbpsi/dr_09.h
+  /usr/include/dvbpsi/dr_0a.h
+  /usr/include/dvbpsi/dr_0b.h
+  /usr/include/dvbpsi/dr_0c.h
+  /usr/include/dvbpsi/dr_0d.h
+  /usr/include/dvbpsi/dr_0e.h
+  /usr/include/dvbpsi/dr_0f.h
+  /usr/include/dvbpsi/dr_42.h
+  /usr/include/dvbpsi/dr_47.h
+  /usr/include/dvbpsi/dr_48.h
+  /usr/include/dvbpsi/dr_4d.h
+  /usr/include/dvbpsi/dr_4e.h
+  /usr/include/dvbpsi/dr_52.h
+  /usr/include/dvbpsi/dr_55.h
+  /usr/include/dvbpsi/dr_56.h
+  /usr/include/dvbpsi/dr_59.h
+  /usr/include/dvbpsi/dvbpsi.h
+  /usr/include/dvbpsi/eit.h
+  /usr/include/dvbpsi/pat.h
+  /usr/include/dvbpsi/pmt.h
+  /usr/include/dvbpsi/psi.h
+  /usr/include/dvbpsi/sdt.h
+  /usr/lib/libdvbpsi.a
+  /usr/lib/libdvbpsi.dll.a
+  /usr/lib/libdvbpsi.la
+
+------------------
+
+Port Notes:
+
+----- version 0.1.5-1 -----
+Initial release for Cygwin.
+
+
+Cygwin port maintained by:
+http://cygwinports.dotsrc.org/

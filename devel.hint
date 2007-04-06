@@ -1,0 +1,8 @@
+category: Audio
+requires: cygwin
+external-source: libdvbpsi
+sdesc: "MPEG TS/DVB PSI table decoding library (development)"
+ldesc: "libdvbpsi is a simple library designed for decoding and 
+generation of MPEG TS and DVB PSI tables."
+
+

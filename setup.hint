@@ -1,0 +1,7 @@
+category: Audio
+requires: libdvbpsi4 libdvbpsi-devel
+sdesc: "MPEG TS/DVB PSI table decoding library (docs)"
+ldesc: "libdvbpsi is a simple library designed for decoding and 
+generation of MPEG TS and DVB PSI tables."
+
+
