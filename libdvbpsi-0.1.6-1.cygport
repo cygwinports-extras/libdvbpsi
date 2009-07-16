@@ -5,27 +5,11 @@ HOMEPAGE="http://www.videolan.org/developers/libdvbpsi.html"
 SRC_URI="http://download.videolan.org/pub/${PN}/${PV}/${PN}${abi}-${PV}.tar.bz2"
 SRC_DIR="${PN}${abi}-${PV}"
 
+PATCH_URI="0.1.6-no-undefined.patch"
+
 PKG_NAMES="${PN} ${PN}${abi} ${PN}-devel"
 PKG_HINTS="setup lib devel"
-PKG_CONTENTS[0]='usr/share/doc/'
-PKG_CONTENTS[1]="usr/bin/${PN/lib/cyg}-${abi}.dll"
-PKG_CONTENTS[2]='usr/include/ usr/lib/'
+declare libdvbpsi${abi}_CONTENTS="usr/bin/*-${abi}.dll usr/share/doc/"
+libdvbpsi_devel_CONTENTS='usr/include/ usr/lib/'
 
-DIFF_EXCLUDES="doxygen.cfg"
-
-src_compile() {
-	cd ${S}
-	cygautoreconf
-	cd ${B}
-	cygconf --enable-release
-	cygmake
-	cygmake doc
-}
-
-src_install() {
-	cd ${B}
-	cyginstall
-
-	docinto html
-	dodoc doc/doxygen/html/*
-}
+CYGCONF_ARGS="--enable-release"

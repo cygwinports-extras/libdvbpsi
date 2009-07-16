@@ -1,5 +1,5 @@
 category: Audio
-requires: cygwin
+requires: libgcc1
 external-source: libdvbpsi
 sdesc: "MPEG TS/DVB PSI table decoding library (runtime)"
 ldesc: "libdvbpsi is a simple library designed for decoding and 

@@ -169,14 +169,3 @@
 +DOC_ABSPATH            = 
 +BIN_ABSPATH            = /usr/local/bin/
 +EXT_DOC_PATHS          = 
---- origsrc/libdvbpsi5-0.1.6/src/Makefile.am	2007-10-22 05:09:07.000000000 -0500
-+++ src/libdvbpsi5-0.1.6/src/Makefile.am	2007-10-23 07:04:28.890625000 -0500
-@@ -11,7 +11,7 @@
-                        $(tables_src) \
-                        $(descriptors_src)
- 
--libdvbpsi_la_LDFLAGS = -version-info 5:0:0
-+libdvbpsi_la_LDFLAGS = -version-info 5:0:0 -no-undefined
- 
- pkginclude_HEADERS = dvbpsi.h psi.h descriptor.h demux.h \
-                      tables/pat.h tables/pmt.h tables/sdt.h tables/eit.h \
