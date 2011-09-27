@@ -1,0 +1,10 @@
+DESCRIPTION="MPEG TS and DVB PSI table decoding library"
+HOMEPAGE="http://www.videolan.org/developers/libdvbpsi.html"
+SRC_URI="http://download.videolan.org/pub/${PN}/${PV}/${P}.tar.bz2"
+
+PKG_NAMES="${PN}7 ${PN}-common ${PN}-devel"
+libdvbpsi7_CONTENTS="usr/bin/cygdvbpsi-7.dll"
+libdvbpsi_common_CONTENTS="usr/share/doc/"
+libdvbpsi_devel_CONTENTS='usr/include/ usr/lib/'
+
+CYGCONF_ARGS="--enable-release"
