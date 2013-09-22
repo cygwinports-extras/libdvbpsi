@@ -1,0 +1,72 @@
+--- origsrc/libdvbpsi-1.1.0/examples/dvbinfo/tcp.c	2013-02-20 05:25:27.000000000 -0600
++++ src/libdvbpsi-1.1.0/examples/dvbinfo/tcp.c	2013-09-22 12:50:25.276782300 -0500
+@@ -49,6 +49,9 @@
+ #   include <netinet/udp.h>
+ #   include <arpa/inet.h>
+ #endif
++#ifndef MSG_CMSG_CLOEXEC
++#define MSG_CMSG_CLOEXEC 0
++#endif
+ 
+ #include "tcp.h"
+ 
+--- origsrc/libdvbpsi-1.1.0/examples/dvbinfo/udp.c	2013-02-20 05:25:27.000000000 -0600
++++ src/libdvbpsi-1.1.0/examples/dvbinfo/udp.c	2013-09-22 12:52:42.971658000 -0500
+@@ -46,6 +46,9 @@
+ #   include <netinet/udp.h>
+ #   include <arpa/inet.h>
+ #endif
++#ifndef MSG_CMSG_CLOEXEC
++#define MSG_CMSG_CLOEXEC 0
++#endif
+ 
+ #include <assert.h>
+ 
+@@ -94,7 +97,7 @@ static bool mcast_connect(int s, const c
+         return false;
+ 
+     greq.gr_interface = ifindex;
+-    assert(len <= sizeof(greq.gr_group));
++    assert((size_t)len <= sizeof(greq.gr_group));
+     memcpy(&greq.gr_group, addr, len);
+ 
+     switch(addr->sa_family)
+@@ -102,7 +105,7 @@ static bool mcast_connect(int s, const c
+         case AF_INET6:
+         {
+             const struct sockaddr_in6 *sin6 = (const struct sockaddr_in6 *)saddr;
+-            assert(len >= sizeof (struct sockaddr_in6));
++            assert((size_t)len >= sizeof (struct sockaddr_in6));
+             if (sin6->sin6_scope_id != 0)
+                 greq.gr_interface = sin6->sin6_scope_id;
+             if (setsockopt(s, SOL_IPV6, MCAST_JOIN_GROUP, &greq, sizeof(greq)) == 0)
+@@ -125,7 +128,7 @@ static bool mcast_connect(int s, const c
+             const struct sockaddr_in6 *ip6 = (const struct sockaddr_in6 *)saddr;
+ 
+             memset(&ipv6mr, 0, sizeof (ipv6mr));
+-            assert(len >= sizeof (struct sockaddr_in6));
++            assert((size_t)len >= sizeof (struct sockaddr_in6));
+             ipv6mr.ipv6mr_multiaddr = ip6->sin6_addr;
+             ipv6mr.ipv6mr_interface = (ifindex > 0) ? ifindex : ip6->sin6_scope_id;
+ # ifdef IPV6_JOIN_GROUP
+@@ -142,7 +145,7 @@ static bool mcast_connect(int s, const c
+             struct ip_mreq imr;
+ 
+             memset(&imr, 0, sizeof (imr));
+-            assert(len >= sizeof (struct sockaddr_in));
++            assert((size_t)len >= sizeof (struct sockaddr_in));
+             imr.imr_multiaddr = ((const struct sockaddr_in *)saddr)->sin_addr;
+ #if 0       /* TODO: Source Specific Multicast Join */
+             if (ifaddr) /* Linux specific interface bound multicast address */
+--- origsrc/libdvbpsi-1.1.0/src/descriptor.h	2013-03-20 10:31:51.000000000 -0500
++++ src/libdvbpsi-1.1.0/src/descriptor.h	2013-09-22 12:24:00.395132200 -0500
+@@ -35,6 +35,9 @@
+ #ifndef _DVBPSI_DESCRIPTOR_H_
+ #define _DVBPSI_DESCRIPTOR_H_
+ 
++#include <stdint.h>
++#include <sys/types.h>
++
+ #ifdef __cplusplus
+ extern "C" {
+ #endif
