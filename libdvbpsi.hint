@@ -1,6 +1,0 @@
-category: Audio
-sdesc: "MPEG TS/DVB PSI table decoding library (sources)"
-ldesc: "libdvbpsi is a simple library designed for decoding and 
-generation of MPEG TS and DVB PSI tables."
-
-
