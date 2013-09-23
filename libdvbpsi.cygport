@@ -1,5 +1,5 @@
 NAME="libdvbpsi"
-VERSION=1.1.0
+VERSION=0.2.2
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="MPEG TS/DVB PSI table decoding library"
@@ -7,10 +7,9 @@ DESCRIPTION="libdvbpsi is a simple library designed for decoding and
 generation of MPEG TS and DVB PSI tables."
 HOMEPAGE="http://www.videolan.org/developers/libdvbpsi.html"
 SRC_URI="http://download.videolan.org/pub/libdvbpsi/${VERSION}/${NAME}-${VERSION}.tar.bz2"
-PATCH_URI="1.1.0-cygwin-compile.patch"
 
-PKG_NAMES="${NAME}9 ${NAME}-devel"
-libdvbpsi9_CONTENTS="usr/bin/cygdvbpsi-9.dll usr/share/doc/"
+PKG_NAMES="${NAME}7 ${NAME}-devel"
+libdvbpsi7_CONTENTS="usr/bin/cygdvbpsi-7.dll usr/share/doc/"
 libdvbpsi_devel_CONTENTS='usr/include/ usr/lib/'
 
 CYGCONF_ARGS="--enable-release"
