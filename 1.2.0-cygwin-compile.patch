@@ -1,0 +1,30 @@
+--- origsrc/libdvbpsi-1.2.0/examples/dvbinfo/udp.c	2014-04-16 02:22:14.000000000 -0500
++++ src/libdvbpsi-1.2.0/examples/dvbinfo/udp.c	2015-05-19 15:38:29.648151200 -0500
+@@ -108,7 +108,7 @@ static bool mcast_connect(int s, const c
+         return false;
+ 
+     greq.gr_interface = ifindex;
+-    assert(len <= sizeof(greq.gr_group));
++    assert(len <= (socklen_t)sizeof(greq.gr_group));
+     memcpy(&greq.gr_group, addr, len);
+ 
+     switch(addr->sa_family)
+@@ -116,7 +116,7 @@ static bool mcast_connect(int s, const c
+         case AF_INET6:
+         {
+             const struct sockaddr_in6 *sin6 = (const struct sockaddr_in6 *)saddr;
+-            assert(len >= sizeof (struct sockaddr_in6));
++            assert(len >= (socklen_t)sizeof (struct sockaddr_in6));
+             if (sin6->sin6_scope_id != 0)
+                 greq.gr_interface = sin6->sin6_scope_id;
+             if (setsockopt(s, SOL_IPV6, MCAST_JOIN_GROUP, &greq, sizeof(greq)) == 0)
+--- origsrc/libdvbpsi-1.2.0/src/descriptor.c	2013-03-20 10:31:51.000000000 -0500
++++ src/libdvbpsi-1.2.0/src/descriptor.c	2015-05-19 15:29:00.597390900 -0500
+@@ -26,6 +26,7 @@
+ 
+ #include "config.h"
+ 
++#include <sys/types.h>
+ #include <stdlib.h>
+ #include <stdbool.h>
+ #include <string.h>
